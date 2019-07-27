@@ -1,5 +1,9 @@
 package com.study.patterns.factory.simplefactory;
 
+import com.study.patterns.factory.product.book.ChineseBook;
+import com.study.patterns.factory.product.book.IBook;
+import com.study.patterns.factory.product.book.MathBook;
+
 /**
  * Created by ASUS on 2019/7/27.
  */

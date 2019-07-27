@@ -1,4 +1,4 @@
-package com.study.patterns.factory.simplefactory;
+package com.study.patterns.factory.product.book;
 
 /**
  * Created by ASUS on 2019/7/27.
