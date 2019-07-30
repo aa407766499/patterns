@@ -9,6 +9,10 @@ public class HungrySingleton {
 
     private static final HungrySingleton HUNGRY_SINGLETON = new HungrySingleton();
 
+    /*static {
+        HUNGRY_SINGLETON = new HungrySingleton();
+    }*/
+
     //防止反射暴力攻击单例
     private HungrySingleton() {
         if (HUNGRY_SINGLETON != null) {

@@ -12,21 +12,21 @@ public class ContainerSingleton {
 
     private static final Map<String, Object> MAP = new ConcurrentHashMap<>();
 
+    //防止反射暴力攻击单例
     private ContainerSingleton() {
         if (MAP != null) {
             throw new RuntimeException("无法创建实例");
         }
     }
 
-    public static Object getInstance(String name) throws ClassNotFoundException {
+    public static Object getInstance(String className) throws ClassNotFoundException {
         synchronized (MAP) {
-            if (!MAP.containsKey(name)) {
-                MAP.put(name, Class.forName(name));
-            }
+            MAP.putIfAbsent(className, Class.forName(className));
         }
-        return MAP.get(name);
+        return MAP.get(className);
     }
 
+    //防止序列化攻击单例
     private Object readResolve() {
         return MAP;
     }

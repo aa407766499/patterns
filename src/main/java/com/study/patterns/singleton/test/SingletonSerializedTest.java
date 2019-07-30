@@ -1,4 +1,6 @@
-package com.study.patterns.singleton;
+package com.study.patterns.singleton.test;
+
+import com.study.patterns.singleton.EnumSingleton;
 
 import java.io.*;
 
